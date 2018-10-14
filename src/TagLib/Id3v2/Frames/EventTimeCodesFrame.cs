@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TagLib.Id3v2
 {
@@ -159,7 +160,7 @@ namespace TagLib.Id3v2
 		{
 			var frame = new EventTimeCodesFrame(header);
 			frame.timestampFormat = timestampFormat;
-			frame.events = events.ConvertAll(item => (EventTimeCode)item.Clone());
+			frame.events = events.Select(item => (EventTimeCode)item.Clone()).ToList();
 			return frame;
 		}
 

@@ -1292,8 +1292,8 @@ namespace TagLib.Id3v2 {
 					"description");
 					
 			StringComparison stringComparison =
-				caseSensitive ? StringComparison.InvariantCulture :
-					StringComparison.InvariantCultureIgnoreCase;
+				caseSensitive ? StringComparison.Ordinal :
+					StringComparison.OrdinalIgnoreCase;
 			
 			foreach (UserTextInformationFrame frame in
 				tag.GetFrames<UserTextInformationFrame> (

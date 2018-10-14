@@ -1416,7 +1416,7 @@ namespace TagLib.Asf {
 				{
 					return double.NaN;
 				}
-				if (text.ToLower(CultureInfo.InvariantCulture).EndsWith("db"))
+				if (text.ToLower().EndsWith("db"))
 				{
 					text = text.Substring(0, text.Length - 2).Trim();
 				}
@@ -1507,7 +1507,7 @@ namespace TagLib.Asf {
 				{
 					return double.NaN;
 				}
-				if (text.ToLower(CultureInfo.InvariantCulture).EndsWith("db"))
+				if (text.ToLower().EndsWith("db"))
 				{
 					text = text.Substring(0, text.Length - 2).Trim();
 				}

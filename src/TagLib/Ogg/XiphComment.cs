@@ -132,7 +132,7 @@ namespace TagLib.Ogg
 			if (key == null)
 				throw new ArgumentNullException ("key");
 			
-			key = key.ToUpper (CultureInfo.InvariantCulture);
+			key = key.ToUpper();
 
 			EnsurePictureFieldsClean(key);
 			
@@ -218,7 +218,7 @@ namespace TagLib.Ogg
 			if (key == null)
 				throw new ArgumentNullException ("key");
 			
-			key = key.ToUpper (CultureInfo.InvariantCulture);
+			key = key.ToUpper();
 			
 			if (values == null || values.Length == 0) {
 				RemoveField (key);
@@ -257,7 +257,7 @@ namespace TagLib.Ogg
 			if (key == null)
 				throw new ArgumentNullException ("key");
 			
-			key = key.ToUpper (CultureInfo.InvariantCulture);
+			key = key.ToUpper();
 			
 			field_list.Remove (key);
 
@@ -442,8 +442,7 @@ namespace TagLib.Ogg
 
 				string key = comment.Substring (0,
 					comment_separator_position)
-					.ToUpper (
-						CultureInfo.InvariantCulture);
+					.ToUpper ();
 				string value = comment.Substring (
 					comment_separator_position + 1);
 				string [] values;
@@ -1490,7 +1489,7 @@ namespace TagLib.Ogg
 				if (text == null) {
 					return double.NaN;
 				}
-				if (text.ToLower(CultureInfo.InvariantCulture).EndsWith("db")) {
+				if (text.ToLower().EndsWith("db")) {
 					text = text.Substring (0, text.Length - 2).Trim();
 				}
 				
@@ -1565,7 +1564,7 @@ namespace TagLib.Ogg
 				if (text == null) {
 					return double.NaN;
 				}
-				if (text.ToLower(CultureInfo.InvariantCulture).EndsWith("db")) {
+				if (text.ToLower().EndsWith("db")) {
 					text = text.Substring (0, text.Length - 2).Trim();
 				}
 				

@@ -29,6 +29,7 @@ using TagLib.Gif;
 using TagLib.IFD;
 using TagLib.Xmp;
 using TagLib.Png;
+using System.Reflection;
 
 namespace TagLib.Image
 {

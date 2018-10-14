@@ -477,7 +477,7 @@ namespace TagLib.Ape {
 				throw new ArgumentNullException ("key");
 			
 			StringComparison comparison =
-				StringComparison.InvariantCultureIgnoreCase;
+				StringComparison.OrdinalIgnoreCase;
 			
 			foreach (Item item in items)
 				if (key.Equals (item.Key, comparison))
@@ -520,7 +520,7 @@ namespace TagLib.Ape {
 				throw new ArgumentNullException ("key");
 			
 			StringComparison comparison =
-				StringComparison.InvariantCultureIgnoreCase;
+				StringComparison.OrdinalIgnoreCase;
 			
 			for (int i = items.Count - 1; i >= 0; i --)
 				if (key.Equals (items [i].Key, comparison))
@@ -684,7 +684,7 @@ namespace TagLib.Ape {
 		private int GetItemIndex (string key)
 		{
 			StringComparison comparison =
-				StringComparison.InvariantCultureIgnoreCase;
+				StringComparison.OrdinalIgnoreCase;
 			
 			for (int i = 0; i < items.Count; i ++)
 				if (key.Equals (items [i].Key, comparison))
@@ -1594,7 +1594,7 @@ namespace TagLib.Ape {
 				{
 					return double.NaN;
 				}
-				if (text.ToLower(CultureInfo.InvariantCulture).EndsWith("db"))
+				if (text.ToLower().EndsWith("db"))
 				{
 					text = text.Substring(0, text.Length - 2).Trim();
 				}
@@ -1685,7 +1685,7 @@ namespace TagLib.Ape {
 				{
 					return double.NaN;
 				}
-				if (text.ToLower(CultureInfo.InvariantCulture).EndsWith("db"))
+				if (text.ToLower().EndsWith("db"))
 				{
 					text = text.Substring(0, text.Length - 2).Trim();
 				}
@@ -1770,7 +1770,7 @@ namespace TagLib.Ape {
 			get {
 				List<IPicture> pictures = new List<IPicture> ();
 				StringComparison comparison =
-					StringComparison.InvariantCultureIgnoreCase;
+					StringComparison.OrdinalIgnoreCase;
 
 				foreach (Item item in items) {
 

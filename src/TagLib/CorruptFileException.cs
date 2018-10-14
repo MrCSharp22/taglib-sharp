@@ -101,6 +101,16 @@ namespace TagLib {
 	public class CorruptFileException : Exception
 	{
 		/// <summary>
+		/// Gets the serialization information of this instance.
+		/// </summary>
+		public SerializationInfo Info { get; }
+
+		/// <summary>
+		/// Gets the streaming context of this instance.
+		/// </summary>
+		public StreamingContext Context { get; }
+
+		/// <summary>
 		///    Constructs and initializes a new instance of <see
 		///    cref="CorruptFileException" /> with a specified
 		///    message.
@@ -161,8 +171,9 @@ namespace TagLib {
 		/// </remarks>
 		protected CorruptFileException (SerializationInfo info,
 		                                StreamingContext context)
-			: base(info, context)
 		{
+			Info = info;
+			Context = context;
 		}
 	}
 }

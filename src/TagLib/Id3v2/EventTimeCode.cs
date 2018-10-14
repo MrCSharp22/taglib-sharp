@@ -3,7 +3,7 @@ using TagLib.Id3v2;
 
 namespace TagLib.Id3v2
 {
-	public class EventTimeCode : ICloneable
+	public class EventTimeCode
 	{
 		#region Private Properties
 
@@ -51,7 +51,7 @@ namespace TagLib.Id3v2
 
 		#region ICloneable
 
-		public object Clone()
+		public EventTimeCode Clone()
 		{
 			return new EventTimeCode(typeOfEvent, time);
 		}

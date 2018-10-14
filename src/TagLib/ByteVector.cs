@@ -2510,7 +2510,7 @@ namespace TagLib {
 			}
 			
 			if (use_broken_latin1)
-				return Encoding.Default;
+				return Encoding.Unicode;
 			
 			try {
 				return Encoding.GetEncoding ("latin1");

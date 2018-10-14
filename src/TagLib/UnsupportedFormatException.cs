@@ -96,6 +96,19 @@ namespace TagLib {
 	public class UnsupportedFormatException : Exception
 	{
 		/// <summary>
+		/// Gets the serialization information for this instance.
+		/// </summary>
+		/// <value>
+		/// The information.
+		/// </value>
+		public SerializationInfo Info { get; }
+
+		/// <summary>
+		/// Gets the streaming context for this instance.
+		/// </summary>
+		public StreamingContext Context { get; }
+
+		/// <summary>
 		///    Constructs and initializes a new instance of <see
 		///    cref="UnsupportedFormatException" /> with a specified
 		///    message.
@@ -157,8 +170,9 @@ namespace TagLib {
 		/// </remarks>
 		protected UnsupportedFormatException (SerializationInfo info,
 		                                      StreamingContext context)
-			: base(info, context)
 		{
+			Info = info;
+			Context = context;
 		}
 	}
 }
